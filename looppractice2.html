@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loop.Practice2</title>
+</head>
+<body>
+<h1>Loop.Practice2</h1>
+<h2>Bài 1: In dãy Fibonacci</h2>
+<script>
+    let fi1=1;
+    let fi2=2;
+    let fi3;
+    document.write(fi1 + " " + fi2 + " ");
+    for(let count = 0; count < 100; count++) {
+        fi3= fi1 + fi2;
+        fi1=fi2;
+        fi2=fi3;
+        document.write(fi2 + " ");
+        count = count++;
+    }
+</script>
+<h2>Bài 2: Tính giai thừa của một số nguyên dương</h2>
+<script>
+    let n= prompt("nhap no N nguyen duong");
+    let giaithua=1;
+    for (let i=1; i<=n; i++) {
+        giaithua=giaithua*i;
+        i=i++;
+    }
+    document.write("giai thua cua N =" + giaithua)
+</script>
+<h2>Bài 3: In tam giác vuông</h2>
+<script>
+    //tam giac vuong ben trai
+    for(let i = 0; i<5; i++) {
+        for (let j = 0; j <i; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    //tam giac vuong ben trai goc tren
+    for(let i = 5; i>=0; i--) {
+        for (let j = 0; j <i; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    //tam giac vuong ben phai goc tren
+    for(let k = 0; k<5; k++) {
+        for (let l = 0; l< k; l++) {
+            document.write("&nbsp;&nbsp;");
+        }
+        for (let l = 0; l < 5-k; l++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+</script>
+<h2>Bài 4: In hình chữ nhật</h2>
+<script>
+    for (let i=0; i<7; i++) {
+        if(i==0 || i==6) {
+            for (let j=0; j<20; j++) {
+                document.write('*');
+            }
+            document.write('<br>');
+        } else {
+            for (let j=0; j<20; j++) {
+                if(j==0 || j==19) {
+                    document.write('*');
+                } else {
+                    document.write('&nbsp;&nbsp;');
+                }
+            }
+            document.write('<br>');
+        }
+
+    }
+</script>
+<h2>Bài 5: Tính lãi ngân hàng biết số tiền, số tháng vay, lãi suất</h2>
+<script>
+    let sotien = +prompt("So tien vay");
+    let sothang = +prompt("So thang vay");
+    let laisuatthang = +prompt("Lai suat theo thang ");
+    for (let x=1; x <= sothang; x++) {
+        sotien=sotien*laisuatthang/100+sotien;
+        x==x++;
+    }
+    document.write("Sau "+sothang+" thang, sotien phai tra ngan hang la "+sotien);
+</script>
+<h2>Bài 6: In hình trái tim</h2>
+</body>
+</html>
